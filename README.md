@@ -6,8 +6,10 @@ A full-stack movie management web app with both **User** and **Admin** roles. Bu
 
 ## 🔗 Live URLs
 
-- **Frontend (Vercel)**: [https://your-frontend-url.vercel.app](https://your-frontend-url.vercel.app)
-- **Backend (Railway)**: [https://your-backend-url.up.railway.app](https://your-backend-url.up.railway.app)
+- **Frontend (Vercel)**: [https://movie-app-frontend-git-main-abhijit0003s-projects.vercel.app]
+(https://movie-app-frontend-git-main-abhijit0003s-projects.vercel.app)
+- **Backend (Railway)**: [https://movie-app-backend-production-5e7b.up.railway.app/api]
+(https://movie-app-backend-production-5e7b.up.railway.app/api)
 
 ---
 
@@ -41,7 +43,7 @@ A full-stack movie management web app with both **User** and **Admin** roles. Bu
 ## 📘 API Documentation
 
 All API routes are prefixed with:
-https://your-backend-url.up.railway.app/api
+https://movie-app-backend-production-5e7b.up.railway.app/api
 
 
 ### 🔹 Public (User)
@@ -74,12 +76,12 @@ https://your-backend-url.up.railway.app/api
 ## ⚙️ Environment Variables
 
 ### Frontend (.env)
-VITE_API_BASE_URL=https://your-backend-url.up.railway.app/api
+VITE_API_BASE_URL=https://movie-app-backend-production-5e7b.up.railway.app/api
 
 ### Backend (.env)
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+MONGO_URI=mongodb+srv://admin:admin123@movieappcluster.nemryeq.mongodb.net/?retryWrites=true&w=majority&appName=movieAppCluster
 PORT=5000
+JWT_SECRET=thisissecret
 
 
 ---
