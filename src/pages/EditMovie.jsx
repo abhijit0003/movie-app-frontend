@@ -34,7 +34,7 @@ const EditMovie = () => {
   useEffect(() => {
     const fetchMovie = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/movies');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/movies`);
         const movie = response.data.find((m) => m._id === id);
         if (movie) {
           setForm({
@@ -57,7 +57,7 @@ const EditMovie = () => {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:5000/api/movies/${id}`, form, {
+      await axios.put(`${import.meta.env.VITE_API_BASE_URL}/movies/${id}`, form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('Movie updated successfully ✅');

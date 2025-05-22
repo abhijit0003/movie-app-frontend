@@ -23,7 +23,7 @@ const Home = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/movies');
+        const response = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/movies`);
         setMovies(response.data);
       } catch (err) {
         console.error('Error fetching movies:', err);
@@ -43,7 +43,7 @@ const Home = () => {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/movies/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_API_BASE_URL}/movies/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMovies((prev) => prev.filter((m) => m._id !== id));

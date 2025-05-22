@@ -40,7 +40,7 @@ const AddMovie = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.post('http://localhost:5000/api/movies', form, {
+      await axios.post(`${import.meta.env.VITE_API_BASE_URL}/movies`, form, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setMessage('✅ Movie added successfully!');
